@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.Header{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  margin:auto ;
+  justify-content: space-between;
+   z-index: 10;
+  width: 100%;
+}
+
+
+.Netflix_logo {
+  height: 80px;
+  width: 160px; 
+  margin-top: 10px;
+  margin-left: 170px;
+  position: relative;
+ 
+
+}
+.imge{
+    width: 100vw;
+    height: 100vh;
+}
+
+.login-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: url("https://assets.nflxext.com/ffe/siteui/vlv3/8200f588-2e93-4c95-8eab-ebba17821657/web/IN-en-20250616-TRIFECTA-perspective_9cbc87b2-d9bb-4fa8-9f8f-a4fe8fc72545_large.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.login-form {
+  position: relative;
+  margin-top: 5%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 60px 68px 40px;
+  width: 100%;
+  height: 60vh;
+  max-width: 350px;
+  color: white;
+  border-radius: 10px;
+}
+
+.login-form h1 {
+  font-size: 2rem;
+}
+.Login_form_header{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 28px;
+
+
+}
+
+.Login_form_Logo{
+    height: 40px;
+  width: 80px; 
+  margin-top: 5px;
+  margin-left: 5px;
+  position: relative;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  background: #333;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 14px;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #e50914;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #b3b3b3;
+}
+
+.login-options a {
+  color: #b3b3b3;
+  text-decoration: none;
+}
+
+.login-signup {
+  color: #b3b3b3;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+.login-signup a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-recaptcha {
+  color: #8c8c8c;
+  font-size: 12px;
+  margin-top: 12px;
+  line-height: 1.4;
+}
