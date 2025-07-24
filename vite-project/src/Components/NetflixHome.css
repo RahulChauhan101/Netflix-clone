@@ -1,12 +1,40 @@
 .n {
-  /* display: flex; */
+  padding-top: 100px;
   background: #000000de;
   width: 100vw;
-  height: full;
+  /* height: full; */
+}
+.Trailer-tital{
+  padding: 10px 70px;
+  color: white;
 }
 
 .NetflixHome {
   display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 20px 0;
+}
+.NetflixHome h1{
+  color: white;
+  background-color: aqua;
+  padding-left: 5%;
+}
+
+/* Hide horizontal scrollbar */
+.NetflixHome::-webkit-scrollbar {
+  height: 8px;
+}
+
+
+.NetflixHome::-webkit-scrollbar-thumb {
+  background: #e50914;
+  border-radius: 4px;
+}
+
+.NetflixHome::-webkit-scrollbar-track {
+  background: #111;
 }
 
 .NetflixHome-item {
@@ -14,6 +42,23 @@
   margin-top: 35px;
   border-radius: 20px;
 
+}
+.NetflixHome-item h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.NetflixHome-item p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #ccc;
 }
 
 

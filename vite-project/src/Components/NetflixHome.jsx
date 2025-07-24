@@ -15,6 +15,18 @@ const Letest_Releaseas = [
 const NetflixHome = () => {
   const [videoUrls, setVideoUrls] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [Trailer, setTrailer] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:8000/api/trailers")
+      .then((res) => {
+        setTrailer(res.data);
+      })
+      .catch((err) => {
+        console.error("❌ Error loading trailer:", err);
+      });
+  }, []);
 
   useEffect(() => {
     axios
@@ -22,6 +34,7 @@ const NetflixHome = () => {
       .then((res) => {
         setVideoUrls(res.data);
         setLoading(false);
+        console.log("asd", res.data);
       })
       .catch((err) => {
         console.error("❌ Failed to fetch video URLs:", err);
@@ -31,15 +44,20 @@ const NetflixHome = () => {
 
   return (
     <div className="n">
+              <h1 className="Trailer-tital">Trailer</h1>
       <div className="NetflixHome">
-        {videoUrls.slice(0, 1).map((url, index) => (
+
+        {Trailer.map((trailer, index) => (
           <div key={index} className="NetflixHome-item">
+            <h3>{trailer.title}</h3>
             <ReactPlayer
               className="NetflixHome_player"
-              url={url}
+              url={trailer.url}
               controls
               height="260px"
+              width="400px"
             />
+            <p>{trailer.description}</p>
           </div>
         ))}
 
@@ -53,7 +71,6 @@ const NetflixHome = () => {
           <button className="details_btn">Trailer</button>
         </div>
       </div>
-
       <h2>Dynamic Videos</h2>
       <div className="ReactPlayer">
         {loading && <p>Loading...</p>}
@@ -64,7 +81,7 @@ const NetflixHome = () => {
               <p>Video #{index + 1}</p>
               <ReactPlayer
                 className="player"
-                url={url}
+                url={url.url}
                 controls
                 width="100%"
                 height="400px"

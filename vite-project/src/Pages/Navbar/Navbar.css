@@ -2,44 +2,54 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #141414;
-  padding: 10px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  padding: 10px 30px;
+  background-color: #111;
+  color: white;
+  width: 96vw;
+  position: fixed;
 }
 
-.netflix-logo {
+.navbar-left img.netflix-logo {
+ 
   height: 40px;
-  margin-right: 20px;
 }
-
-.nav-links {
+.nav-links a{
   display: flex;
-  list-style: none;
-  gap: 20px;
+  align-items: center;
+  color: red;
 }
-
-.nav-links li a {
+.nav-links li {
+  display: inline-block;
+  margin-right: 20px;
   color: white;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 16px;
 }
 
-.nav-links li a:hover {
-  text-decoration: underline;
-}
-
-.signin-btn {
-  background-color: red;
+.navbar-right {
+  display: flex;
+  gap: 1rem;
+  font-size: 14px;
   color: white;
-  padding: 6px 12px;
-  border-radius: 4px;
-  text-decoration: none;
+}
+
+.username {
+  margin-left: 10px;
   font-weight: bold;
+  color: white;
 }
 
-.signin-btn:hover {
-  background-color: #e50914;
+.navbar-logout {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  color: white;
+  margin-left: 15px;
+}
+
+.logout-icon {
+  font-size: 20px;
+}
+
+.logout-text {
+  font-size: 14px;
 }
