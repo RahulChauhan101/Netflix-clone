@@ -1,0 +1,51 @@
+.search-results-container {
+  padding: 20px;
+  padding-top: 100px;
+}
+
+.search-results-container h2 {
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.search-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.search-card:hover {
+  transform: scale(1.01);
+}
+
+.search-card h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  color: #333;
+}
+
+.search-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.search-card img {
+  width: 150px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.search-card a {
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.search-card a:hover {
+  text-decoration: underline;
+}

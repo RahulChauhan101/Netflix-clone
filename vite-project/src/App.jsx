@@ -10,6 +10,8 @@ import Rootlayout from "./Components/Layout/Rootlayout";
 import Body from "./Components/Body";
 import Movies from "./Pages/Movies";
 import TV_Shows from "./Pages/Navbar/TV_Shows";
+import SearchResults from "./Pages/SearchResults";
+import MoviesSelect from "./Pages/MoviesSelect";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -41,11 +43,16 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/Home" element={<Home />} />
             <Route path="/Body" element={<Body />} />
+            <Route path="/search" element={<SearchResults />} />
+            <Route path="/search" element={<SearchResults />} />
+
             <Route path="/Vidioplay" element={<Vidioplay />} />
             <Route path="/NetflixHome" element={<NetflixHome />} />
+            <Route path="/moviesSelect" element={<MoviesSelect />} />
             <Route path="/movies" element={<Movies />} />
             <Route path="tv_Shows" element={<TV_Shows />} />
             <Route path="*" element={<Navigate to="/" />} />
+            
           </Route>
         ) : (
           // Public routes (unauthenticated)
